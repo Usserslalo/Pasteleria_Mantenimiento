@@ -33,8 +33,7 @@ Route::prefix('carrito')->group(function () {
 });
 
 // Pedido especial
-Route::get('/pedido-especial', [PedidoEspecialController::class, 'create'])->name('pedido.especial.create');
-Route::post('/pedido-especial', [PedidoEspecialController::class, 'store'])->name('pedido.especial.store');
+
 
 /*
 |--------------------------------------------------------------------------
@@ -47,6 +46,8 @@ Route::middleware('auth')->group(function () {
         Route::get('/', [ProfileController::class, 'edit'])->name('profile.edit');
         Route::patch('/', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/', [ProfileController::class, 'destroy'])->name('profile.destroy');
+        Route::get('/pedido-especial', [PedidoEspecialController::class, 'create'])->name('pedido.especial.create');
+        Route::post('/pedido-especial', [PedidoEspecialController::class, 'store'])->name('pedido.especial.store');
     });
 });
 
