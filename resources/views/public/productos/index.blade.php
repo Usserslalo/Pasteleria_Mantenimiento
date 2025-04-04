@@ -6,10 +6,9 @@
         🎂 Nuestros Deliciosos Productos 🎂
     </h1>
 
-    {{-- Filtros de categoría --}}
     <div class="mb-5 text-center">
         <div class="d-flex flex-wrap justify-content-center gap-2">
-            <a href="{{ route('productos.publicos') }}" 
+            <a href="{{ route('productos.publicos') }}"
                class="btn btn-pastel {{ !$categoria_id ? 'active' : '' }}">
                 Todos
             </a>
@@ -22,16 +21,15 @@
         </div>
     </div>
 
-    {{-- Productos --}}
     <div class="row g-4">
         @forelse ($productos as $producto)
         <div class="col-sm-6 col-md-4 col-lg-3">
-            <div class="card h-100 shadow-lg-hover border-0 transition-all" 
+            <div class="card h-100 shadow-lg-hover border-0 transition-all"
                  style="border-radius: 20px; background: #fff5f5; transition: 0.3s all ease;">
                 @if($producto->imagen)
                 <div class="position-relative" style="padding-top: 100%;">
-                    <img src="{{ asset('storage/' . $producto->imagen) }}" 
-                         class="card-img-top position-absolute top-0 start-0 w-100 h-100 p-3" 
+                    <img src="{{ asset('storage/' . $producto->imagen) }}"
+                         class="card-img-top position-absolute top-0 start-0 w-100 h-100 p-3"
                          style="object-fit: contain; border-radius: 20px 20px 0 0;">
                 </div>
                 @endif
@@ -99,6 +97,5 @@
     }
 </style>
 
-<!-- Agregar en tu layout -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 @endsection
