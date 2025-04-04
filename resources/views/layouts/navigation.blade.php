@@ -25,6 +25,7 @@
                         👑 Admin
                     </a>
                     <ul class="dropdown-menu dropdown-pastel">
+                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('admin.dashboard') }}">Panel de Administracion</a></li>
                         <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('categorias.index') }}">Categorías</a></li>
                         <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('productos.index') }}">Productos</a></li>
                         <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('admin.pedidos.index') }}">Pedidos</a></li>
