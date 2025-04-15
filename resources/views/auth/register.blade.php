@@ -8,17 +8,28 @@
                 🍓 Crear Cuenta
             </h2>
 
+            {{-- ✅ Mostrar errores de validación --}}
+            @if ($errors->any())
+                <div class="alert alert-danger text-start rounded-3 py-3 px-4">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>⚠️ {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             <form method="POST" action="{{ route('register') }}">
                 @csrf
 
                 <div class="mb-3">
                     <label for="name" class="form-label text-brown">Nombre completo</label>
-                    <input type="text" name="name" id="name" class="form-control pastel-input" required autofocus>
+                    <input type="text" name="name" id="name" value="{{ old('name') }}" class="form-control pastel-input" required autofocus>
                 </div>
 
                 <div class="mb-3">
                     <label for="email" class="form-label text-brown">Correo electrónico</label>
-                    <input type="email" name="email" id="email" class="form-control pastel-input" required>
+                    <input type="email" name="email" id="email" value="{{ old('email') }}" class="form-control pastel-input" required>
                 </div>
 
                 <div class="mb-3">
@@ -43,7 +54,7 @@
     </div>
 </div>
 
-{{-- Estilos pastel reutilizables --}}
+{{-- Estilos pastel --}}
 <style>
     .text-brown {
         color: #6d4c41;
@@ -72,6 +83,12 @@
     .pastel-input:focus {
         border-color: #ff9494;
         box-shadow: 0 0 0 0.2rem rgba(255, 148, 148, 0.25);
+    }
+
+    @media (max-width: 576px) {
+        .card-body {
+            padding: 1.5rem;
+        }
     }
 </style>
 

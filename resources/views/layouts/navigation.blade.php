@@ -26,10 +26,10 @@
                     </a>
                     <ul class="dropdown-menu dropdown-pastel">
                         <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('admin.dashboard') }}">Panel de Administracion</a></li>
-                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('categorias.index') }}">Categorías</a></li>
-                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('productos.index') }}">Productos</a></li>
-                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('admin.pedidos.index') }}">Pedidos</a></li>
-                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('admin.pedidos-especiales.index') }}">Pedidos Especiales</a></li>
+                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('categorias.index') }}">Crear Categorías</a></li>
+                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('productos.index') }}">Crear Productos</a></li>
+                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('admin.pedidos.index') }}">Gestionar Pedidos</a></li>
+                        <li><a class="dropdown-item dropdown-item-pastel" href="{{ route('admin.pedidos-especiales.index') }}">Gestionar Pedidos Especiales</a></li>
                     </ul>
                 </li>
             @endif

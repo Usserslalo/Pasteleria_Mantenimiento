@@ -67,10 +67,10 @@
                         <div class="form-group">
                             <label for="imagen" class="form-label">Inspiración</label>
                             <div class="file-upload-wrapper">
-                                <input type="file" name="imagen" class="form-input">
+                                <input type="file" name="imagen" class="form-input" accept=".jpg,.jpeg,.png,.webp,image/*">
                                 <span class="upload-text">📤 Arrastra o haz clic para subir</span>
                             </div>
-                        </div>
+                        </div>                        
                     </div>
                 </div>
 

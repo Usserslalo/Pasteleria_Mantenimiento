@@ -20,7 +20,7 @@ class PedidoEspecialController extends Controller
             'contacto' => 'required|string|max:255',
             'descripcion' => 'required|string',
             'fecha_deseada' => 'nullable|date',
-            'imagen' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'imagen' => 'nullable|file|mimes:jpg,jpeg,png,webp|max:2048',
         ]);
 
         $data = $request->all();

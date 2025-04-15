@@ -12,7 +12,7 @@
             <div class="card h-100 shadow-lg-hover border-0 transition-all" 
                  style="border-radius: 20px; background: #fff5f5; transition: 0.3s all ease;">
                 <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title fw-bold text-brown mb-3">Pedidos</h5>
+                    <h5 class="card-title fw-bold text-brown mb-3">Gestionar Pedidos</h5>
                     <p class="card-text text-muted mb-2 px-2">Administra los pedidos de los clientes.</p>
                     <a href="{{ route('admin.pedidos.index') }}" 
                        class="btn btn-pastel-primary mt-auto py-2">
@@ -27,7 +27,7 @@
             <div class="card h-100 shadow-lg-hover border-0 transition-all" 
                  style="border-radius: 20px; background: #fff5f5; transition: 0.3s all ease;">
                 <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title fw-bold text-brown mb-3">Pedidos Especiales</h5>
+                    <h5 class="card-title fw-bold text-brown mb-3">Gestionar Pedidos Especiales</h5>
                     <p class="card-text text-muted mb-2 px-2">Revisa solicitudes personalizadas de clientes.</p>
                     <a href="{{ route('admin.pedidos-especiales.index') }}" 
                        class="btn btn-pastel-warning mt-auto py-2">
@@ -42,7 +42,7 @@
             <div class="card h-100 shadow-lg-hover border-0 transition-all" 
                  style="border-radius: 20px; background: #fff5f5; transition: 0.3s all ease;">
                 <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title fw-bold text-brown mb-3">Productos</h5>
+                    <h5 class="card-title fw-bold text-brown mb-3">Crear Productos</h5>
                     <p class="card-text text-muted mb-2 px-2">Gestiona los productos de la tienda.</p>
                     <a href="{{ route('productos.index') }}" 
                        class="btn btn-pastel-success mt-auto py-2">
@@ -57,7 +57,7 @@
             <div class="card h-100 shadow-lg-hover border-0 transition-all" 
                  style="border-radius: 20px; background: #fff5f5; transition: 0.3s all ease;">
                 <div class="card-body text-center d-flex flex-column">
-                    <h5 class="card-title fw-bold text-brown mb-3">Categorías</h5>
+                    <h5 class="card-title fw-bold text-brown mb-3">Crear Categorías</h5>
                     <p class="card-text text-muted mb-2 px-2">Administra las categorías de productos.</p>
                     <a href="{{ route('categorias.index') }}" 
                        class="btn btn-pastel-info mt-auto py-2">

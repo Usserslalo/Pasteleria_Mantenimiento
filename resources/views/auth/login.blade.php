@@ -8,8 +8,22 @@
                 🍪 Iniciar Sesión
             </h2>
 
+            {{-- ✅ Mensaje de éxito (como cierre de sesión o recuperación) --}}
             @if(session('status'))
-                <div class="alert alert-success text-center">{{ session('status') }}</div>
+                <div class="alert alert-success text-center rounded-3 py-2">
+                    {{ session('status') }}
+                </div>
+            @endif
+
+            {{-- ✅ Mostrar errores de validación --}}
+            @if ($errors->any())
+                <div class="alert alert-danger text-start rounded-3 py-3 px-4">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $error)
+                            <li>⚠️ {{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
             @endif
 
             <form method="POST" action="{{ route('login') }}">
@@ -17,7 +31,7 @@
 
                 <div class="mb-3">
                     <label for="email" class="form-label text-brown">Correo electrónico</label>
-                    <input type="email" name="email" id="email" class="form-control pastel-input" required autofocus>
+                    <input type="email" name="email" id="email" class="form-control pastel-input" value="{{ old('email') }}" required autofocus>
                 </div>
 
                 <div class="mb-3">
@@ -34,11 +48,11 @@
                     <button type="submit" class="btn btn-pastel-primary py-2">Ingresar</button>
                 </div>
 
-                <div class="text-center">
+                {{-- <div class="text-center">
                     <a href="{{ route('password.request') }}" class="text-decoration-none text-muted">
                         ¿Olvidaste tu contraseña?
                     </a>
-                </div>
+                </div> --}}
             </form>
         </div>
     </div>
@@ -73,6 +87,12 @@
     .pastel-input:focus {
         border-color: #ff9494;
         box-shadow: 0 0 0 0.2rem rgba(255, 148, 148, 0.25);
+    }
+
+    @media (max-width: 576px) {
+        .card-body {
+            padding: 1.5rem;
+        }
     }
 </style>
 
